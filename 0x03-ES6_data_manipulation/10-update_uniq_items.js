@@ -1,4 +1,4 @@
-function updateUniqueItems(map) {
+export default function updateUniqueItems(map) {
     // Check if the argument is a map
     if (!(map instanceof Map)) {
         throw new Error('Cannot process');
