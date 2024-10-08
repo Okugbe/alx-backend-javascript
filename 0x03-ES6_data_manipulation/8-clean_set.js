@@ -1,14 +1,9 @@
-export default function cleanSet(set, startString) {
-    // Check if startString is empty
-    if (startString === '') {
-        return '';
+export default function cleanSet(set, string) {
+    if (string === undefined || string.length === 0) {
+      return '';
     }
-
-    // Filter and map the set values
-    const result = [...set]
-        .filter(value => value.startsWith(startString))
-        .map(value => value.slice(startString.length))
-        .join('-');
-
-    return result;
-}
+    return [...set]
+      .filter((str) => (str !== undefined ? str.startsWith(string) : ''))
+      .map((str) => (str !== undefined ? str.slice(string.length) : ''))
+      .join('-');
+  }
